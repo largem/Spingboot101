@@ -1,12 +1,9 @@
-package example.sprintboot101.client.local;
+package example.sprintboot101.client;
 
-import example.sprintboot101.client.ExampleClient;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
-import org.springframework.stereotype.Component;
 
-@Component("ExampleLocalClient")
-public class ExampleLocalClient implements ExampleClient {
+public class ExampleRemoteClient implements ExampleClient {
 
     @Autowired
     @Qualifier("ExampleService")
@@ -14,6 +11,6 @@ public class ExampleLocalClient implements ExampleClient {
 
     @Override
     public String greeting(String arg) {
-        return exampleClient.greeting(arg);
+        return exampleClient.greeting("From RemoteClient: " + arg);
     }
 }

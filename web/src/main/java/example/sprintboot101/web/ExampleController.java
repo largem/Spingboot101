@@ -10,11 +10,11 @@ import org.springframework.web.bind.annotation.RestController;
 public class ExampleController {
 
     @Autowired
-    @Qualifier("ExampleLocalClient")
+    @Qualifier("ExampleClient")
     private ExampleClient exampleClient;
 
     @RequestMapping("/greeting")
     public String hello() {
-        return exampleClient.greeting("abc");
+        return exampleClient.greeting("Hello World");
     }
 }

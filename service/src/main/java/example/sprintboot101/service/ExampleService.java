@@ -8,6 +8,6 @@ public class ExampleService implements ExampleClient {
 
     @Override
     public String greeting(String arg) {
-        return "Hello world with " + arg;
+        return arg;
     }
 }
