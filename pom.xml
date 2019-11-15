@@ -9,6 +9,7 @@
         <module>service</module>
         <module>client</module>
         <module>app</module>
+        <module>test-client</module>
     </modules>
 
     <groupId>example.sprint-boot-101</groupId>
