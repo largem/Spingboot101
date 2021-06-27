@@ -1,6 +1,6 @@
-package example.sprintboot101.service;
+package example.springboot101.service;
 
-import example.sprintboot101.client.ExampleClient;
+import example.springboot101.client.ExampleClient;
 import org.springframework.stereotype.Service;
 
 @Service("ExampleService")

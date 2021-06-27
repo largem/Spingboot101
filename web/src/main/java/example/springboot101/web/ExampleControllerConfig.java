@@ -1,6 +1,6 @@
-package example.sprintboot101.web;
+package example.springboot101.web;
 
-import example.sprintboot101.client.ExampleClient;
+import example.springboot101.client.ExampleClient;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.ApplicationContext;

@@ -1,25 +1,26 @@
 package example.testclient;
 
-import org.apache.http.client.config.RequestConfig;
 import org.apache.http.impl.client.CloseableHttpClient;
 import org.apache.http.impl.client.HttpClients;
 import org.apache.http.impl.conn.PoolingHttpClientConnectionManager;
 import org.springframework.http.client.HttpComponentsClientHttpRequestFactory;
 import org.springframework.web.client.RestTemplate;
 
+// this program to test how connection pool works.
+// start the server first (app module)
 public class TestClient {
 
     public static void main(String[] args) {
         RestTemplate restTemplate = new RestTemplate(httpComponentsClientHttpRequestFactory());
 
-        //recusiveCall(restTemplate);
+        //recursiveCall(restTemplate);
         repeatCall(restTemplate);
     }
 
-    private static void recusiveCall(RestTemplate restTemplate) {
+    private static void recursiveCall(RestTemplate restTemplate) {
         String result = restTemplate.getForObject("http://localhost:8080/greeting/me", String.class);
         System.out.println(result);
-        recusiveCall(restTemplate);
+        recursiveCall(restTemplate);
     }
 
     private static void repeatCall(RestTemplate restTemplate) {
@@ -44,5 +45,4 @@ public class TestClient {
     private static CloseableHttpClient httpClient() {
         return HttpClients.createMinimal(poolingHttpClientConnectionManager());
     }
-
 }

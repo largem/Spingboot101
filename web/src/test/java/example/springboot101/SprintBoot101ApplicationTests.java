@@ -1,4 +1,4 @@
-package example.sprintboot101;
+package example.springboot101;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
