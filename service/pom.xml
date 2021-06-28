@@ -23,6 +23,11 @@
         </dependency>
 
         <dependency>
+            <groupId>com.google.guava</groupId>
+            <artifactId>guava</artifactId>
+        </dependency>
+
+        <dependency>
             <groupId>example.sprint-boot-101</groupId>
             <artifactId>client</artifactId>
         </dependency>

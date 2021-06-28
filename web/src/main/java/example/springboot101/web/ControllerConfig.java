@@ -1,5 +1,6 @@
 package example.springboot101.web;
 
+import example.springboot101.client.ComputerManagementClient;
 import example.springboot101.client.ExampleClient;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
@@ -8,19 +9,27 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 @Configuration
-public class ExampleControllerConfig {
+public class ControllerConfig {
 
-    @Value("${exampleClient.mode}")
-    private String exampleClientMode;
+    @Value("${client.mode}")
+    private String clientMode;
 
     @Autowired
     private ApplicationContext context;
 
     @Bean("ExampleClient")
     public ExampleClient exampleClient() {
-        if ("remote".equals(exampleClientMode)) {
+        if ("remote".equals(clientMode)) {
             return (ExampleClient)context.getBean("ExampleRemoteClient");
         }
         return (ExampleClient)context.getBean("ExampleLocalClient");
+    }
+
+    @Bean("ComputerManagementClient")
+    public ComputerManagementClient computerManagementClient() {
+        if ("remote".equals(clientMode)) {
+            return (ComputerManagementClient) context.getBean("RemoteComputerManagementClient");
+        }
+        return (ComputerManagementClient) context.getBean("LocalComputerManagementClient");
     }
 }
