@@ -19,4 +19,10 @@ public class ComputerManagementService implements ComputerManagementClient {
     public List<Computer> getAllComputers() {
         return Lists.newArrayList(computerRepository.findAll());
     }
+
+    @Override
+    public long addComputer(Computer computer) {
+        final Computer saved = computerRepository.save(computer);
+        return saved.getId();
+    }
 }

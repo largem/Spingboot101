@@ -6,4 +6,6 @@ import java.util.List;
 
 public interface ComputerManagementClient {
     List<Computer> getAllComputers();
+
+    long addComputer(Computer computer);
 }

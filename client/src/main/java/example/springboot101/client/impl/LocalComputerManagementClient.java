@@ -22,4 +22,9 @@ public class LocalComputerManagementClient implements ComputerManagementClient {
     public List<Computer> getAllComputers() {
         return client.getAllComputers();
     }
+
+    @Override
+    public long addComputer(Computer computer) {
+        return client.addComputer(computer);
+    }
 }
