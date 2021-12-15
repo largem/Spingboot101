@@ -11,6 +11,7 @@ import springfox.documentation.spring.web.plugins.Docket;
 /**
  * configuration to enable Swagger2 in SpringBoot application
  * need {@code springfox-boot-starter} as dependency
+ * url: http://localhost:8080/swagger-ui/
  */
 @Configuration
 public class SpringFoxConfig {

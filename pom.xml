@@ -10,12 +10,13 @@
         <module>client</module>
         <module>app</module>
         <module>test-client</module>
+        <module>message</module>
     </modules>
 
-    <groupId>example.sprint-boot-101</groupId>
+    <groupId>example.spring-boot-101</groupId>
     <artifactId>parent</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>sprint-boot-101</name>
+    <name>spring-boot-101</name>
     <description>Exercise project for Spring Boot</description>
 
     <properties>
@@ -31,6 +32,15 @@
     <dependencyManagement>
         <dependencies>
             <dependency>
+                <!-- Import dependency management from Spring Boot -->
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-dependencies</artifactId>
+                <version>${sprint-boot.version}</version>
+                <type>pom</type>
+                <scope>provided</scope>
+            </dependency>
+
+            <dependency>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-starter</artifactId>
                 <version>${sprint-boot.version}</version>
@@ -39,6 +49,12 @@
             <dependency>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-starter-web</artifactId>
+                <version>${sprint-boot.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-activemq</artifactId>
                 <version>${sprint-boot.version}</version>
             </dependency>
 
@@ -80,20 +96,26 @@
             </dependency>
 
             <dependency>
-                <groupId>example.sprint-boot-101</groupId>
+                <groupId>example.spring-boot-101</groupId>
                 <artifactId>web</artifactId>
                 <version>${project.version}</version>
             </dependency>
 
             <dependency>
-                <groupId>example.sprint-boot-101</groupId>
+                <groupId>example.spring-boot-101</groupId>
                 <artifactId>client</artifactId>
                 <version>${project.version}</version>
             </dependency>
 
             <dependency>
-                <groupId>example.sprint-boot-101</groupId>
+                <groupId>example.spring-boot-101</groupId>
                 <artifactId>service</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>example.spring-boot-101</groupId>
+                <artifactId>message</artifactId>
                 <version>${project.version}</version>
             </dependency>
 

@@ -17,7 +17,7 @@ public class ComputerManagementService implements ComputerManagementClient {
 
     @Override
     public List<Computer> getAllComputers() {
-        return Lists.newArrayList(computerRepository.findAll());
+        return computerRepository.findAll();
     }
 
     @Override
