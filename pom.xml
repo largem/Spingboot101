@@ -22,7 +22,7 @@
     <properties>
         <java.version>1.8</java.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <sprint-boot.version>2.1.8.RELEASE</sprint-boot.version>
+        <sprint-boot.version>2.5.12</sprint-boot.version>
         <springfox.version>3.0.0</springfox.version>
         <swagger.version>1.5.20</swagger.version>
         <guava.version>30.1.1-jre</guava.version>
